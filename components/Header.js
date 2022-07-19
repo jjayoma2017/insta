@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
-import { SearchIcon } from '@heroicons/react/outline';
+import { SearchIcon, PlusCircleIcon } from '@heroicons/react/outline';
+import { HomeIcon } from '@heroicons/react/solid';
 
 export default function Header() {
   return (
-    <div className="flex items-center justify-between max-w-6xl">
+    <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
       {/* Left */}
       {/* hidden to be hidden at mobile */}
       <div className="cursor-pointer h-24 w-24 relative hidden lg:inline-grid">
@@ -37,7 +38,17 @@ export default function Header() {
         />
       </div>
       {/* Right */}
-      <h1>Right side</h1>
+      <div className="flex space-x-4 items-center">
+        <HomeIcon className="hidden lg:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+        <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+        <Image
+          src="https://media-exp2.licdn.com/dms/image/C5603AQH3J_1kphIvhQ/profile-displayphoto-shrink_400_400/0/1517429465337?e=1663804800&v=beta&t=RYZazLKN-2Ttsqcnn6riV0kqzVJfChjfn68_tIfNgio"
+          className="rounded-full cursor-pointer"
+          alt=""
+          width={50}
+          height={50}
+        />
+      </div>
     </div>
   );
 }
