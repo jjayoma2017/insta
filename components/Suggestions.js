@@ -14,7 +14,6 @@ export default function Suggestions() {
       id: i,
     }));
     setSuggestions(suggestions);
-    console.log(suggestions);
   }, []);
   return (
     <div className="mt-4 ml-10">
